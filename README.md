@@ -1,6 +1,9 @@
 # Fly with me app
 
-Fly with me app is a frontend application built using React that interacts with a flight finder backend application. You can access the website [here](https://flight-finder-frontend-jakhongir222.vercel.app/)
+Fly with me app is a frontend application built using React that interacts with a flight finder backend application. 
+It only shows the flights between Stockholm, Amsterdam and Oslo
+
+You can access the website [here](https://flight-finder-frontend-jakhongir222.vercel.app/)
 
 ## Installation
 
