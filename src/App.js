@@ -6,7 +6,8 @@ import logo from './logo.png'
 function App() {
   return (
     <div className="App">
-      <img className="logo" src={logo} alt="Jak's fitness app logo" height={100} />
+      <div className="logo">
+      <img src={logo} alt="Jak's fitness app logo" height={100} /></div>
       <FlightSearch/>
     </div>
   );

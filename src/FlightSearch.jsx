@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import './Flights.css'
 
 function FlightSearch() {
     const [flights, setFlights] = useState([]);
@@ -25,7 +26,7 @@ function FlightSearch() {
     }
   
     return (
-      <div>
+      <div className="container">
         <form onSubmit={handleSubmit}>
           <label htmlFor="from"></label>
           <input type="text" name="from" placeholder="Enter departure city" />
@@ -47,12 +48,13 @@ function FlightSearch() {
             {flights.map(flight => (
               <li key={flight.route_id}>
                 {flight.itineraries.map(itinerary => (
-                  <div key={itinerary.itinerary_id}>
+                  <div className='ticket' key={itinerary.itinerary_id}>
                     <h3>{flight.departureDestination} - {flight.arrivalDestination}</h3>
                     <p>Departure: {new Date(itinerary.departureAt).toLocaleDateString()}</p>
                     <p>Arrival: {new Date(itinerary.arrivalAt).toLocaleDateString()}</p>
                     <p>Price: {itinerary.prices.adult}</p>
                     <p>Available seats: {itinerary.availableSeats}</p>
+                    <button>Book flight</button>
                   </div>
                 ))}
               </li>
