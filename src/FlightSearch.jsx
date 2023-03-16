@@ -12,7 +12,7 @@ function FlightSearch() {
       const departureTime = formData.get('departureTime');
       const arrivalTime = formData.get('arrivalTime');
       
-      fetch(`https://my.api.mockaroo.com/flights.json?key=099170f0`)
+      fetch(`https://my.api.mockaroo.com/flights.json?key=0848b890`)
         .then(response => response.json())
         .then(data => {
           const filteredFlights = data.filter(flight => 
@@ -27,11 +27,17 @@ function FlightSearch() {
     return (
       <div>
         <form onSubmit={handleSubmit}>
-          <label htmlFor="from">From:</label>
+          <label htmlFor="from"></label>
           <input type="text" name="from" placeholder="Enter departure city" />
   
-          <label htmlFor="to">To:</label>
+          <label htmlFor="to"></label>
           <input type="text" name="to" placeholder="Enter arrival city"/>
+
+          <label htmlFor="departureTime">Departure date:</label>
+          <input type="date" name="departureTime" />
+
+          <label htmlFor="arrivalTime">Arrival date:</label>
+          <input type="date" name="arrivalTime" />
   
           <button type="submit">Search</button>
         </form>
